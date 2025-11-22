@@ -1,0 +1,726 @@
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #111;
+  min-height: 100vh;
+}
+
+/* ========================================
+   CONTAINER
+   ======================================== */
+.container {
+  max-width: 924px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+header img {
+  width: 90px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 3px solid white;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  font-size: 1.1em;
+  opacity: 0.95;
+  color: #e0e7ff;
+}
+
+header hr {
+  border: none;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #f3f4f6;
+  color: #070707;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+}
+
+nav a:hover {
+  background: #1d4ed8;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(29, 78, 216, 0.3);
+}
+
+nav a.active,
+nav a[href$=".html"]:active {
+  background: #1e3a8a;
+  color: white;
+}
+
+/* ========================================
+   BOX & CARD
+   ======================================== */
+.box,
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover,
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   SECTION TITLE
+   ======================================== */
+.section-title {
+  padding-left: 15px;
+  border-left: 5px solid #22c55e;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1d4ed8;
+}
+
+/* ========================================
+   BIO SECTION (biodata.html)
+   ======================================== */
+.bio {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e5e7eb;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.bio p {
+  flex: 1;
+  min-width: 250px;
+  text-align: justify;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ========================================
+   IMAGES
+   ======================================== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo {
+  display: block;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+/* ========================================
+   MINAT SECTION (index.html)
+   ======================================== */
+.minat {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ========================================
+   LISTS
+   ======================================== */
+ul,
+ol {
+  margin-left: 30px;
+  color: #333;
+}
+
+ul li,
+ol li {
+  margin-bottom: 12px;
+  padding: 5px 0;
+  line-height: 1.6;
+}
+
+/* ========================================
+   LINKS
+   ======================================== */
+a {
+  color: #1d4ed8;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+/* ========================================
+   GALLERY (galeri.html)
+   ======================================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery .card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.gallery .card:hover {
+  transform: scale(1.05);
+}
+
+.gallery .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin: 0;
+}
+
+.gallery .card figcaption {
+  font-size: 14px;
+  color: white;
+  background-color: #8b5cf6;
+  padding: 12px 8px;
+  text-align: center;
+  margin: 0;
+}
+
+/* ========================================
+   VIDEO (galeri.html)
+   ======================================== */
+iframe {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   TABLE (jadwal.html)
+   ======================================== */
+table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  background-color: #1d4ed8;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+tr:hover {
+  background-color: #eff6ff;
+}
+
+/* ========================================
+   FORMS (feedback.html)
+   ======================================== */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+  display: block;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #1d4ed8;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+select {
+  cursor: pointer;
+  background-color: white;
+}
+
+/* ========================================
+   RADIO & CHECKBOX
+   ======================================== */
+.radio-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.radio-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio-checkbox input[type="radio"],
+.radio-checkbox input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+button {
+  appearance: button;
+  background-color: #4d4ae8;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid #4d4ae8;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+button:hover {
+  background-color: #3733e5;
+  border-color: #3733e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(77, 74, 232, 0.4);
+}
+
+button:active {
+  background-color: #3e3bba;
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET (768px - 1023px)
+   ======================================== */
+@media screen and (max-width: 1023px) {
+  .container {
+    padding: 15px;
+  }
+
+  header {
+    padding: 25px 15px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  header img {
+    width: 70px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .bio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bio p {
+    text-align: left;
+    min-width: 100%;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+  }
+
+  .photo {
+    max-width: 100%;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE (480px - 767px)
+   ======================================== */
+@media screen and (max-width: 767px) {
+  body {
+    background: white;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  header {
+    padding: 20px 10px;
+    border-radius: 10px;
+  }
+
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header p {
+    font-size: 0.9em;
+  }
+
+  header img {
+    width: 60px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .box,
+  .card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    font-size: 1.3em;
+    padding-left: 10px;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bio p {
+    font-size: 0.95em;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .gallery .card img {
+    height: 200px;
+  }
+
+  table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - SMALL MOBILE (320px - 479px)
+   ======================================== */
+@media screen and (max-width: 479px) {
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  header p {
+    font-size: 0.85em;
+  }
+
+  header img {
+    width: 50px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .section-title {
+    font-size: 1.2em;
+  }
+
+  .box,
+  .card {
+    padding: 12px;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  table {
+    font-size: 11px;
+  }
+
+  th,
+  td {
+    padding: 6px 4px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - DESKTOP/LAPTOP (1024px+)
+   ======================================== */
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 30px;
+  }
+
+  header h1 {
+    font-size: 3em;
+  }
+
+  header img {
+    width: 100px;
+  }
+
+  nav a {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 2em;
+  }
+
+  .box,
+  .card {
+    padding: 30px;
+  }
+
+  .avatar {
+    width: 250px;
+    height: 250px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .gallery .card img {
+    height: 200px;
+  }
+
+  .photo {
+    max-width: 500px;
+  }
+
+  table {
+    font-size: 16px;
+  }
+
+  th,
+  td {
+    padding: 15px;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.text-center {
+  text-align: center;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
